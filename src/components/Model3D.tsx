@@ -5,6 +5,8 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
+import { Suspense } from "react";
+
 
 
 function Model() {
@@ -34,9 +36,9 @@ export default function Model3D() {
     <Canvas camera={{ position: [0, 0, 5] }}>
       <ambientLight intensity={2} />
       <directionalLight position={[5, 5, 5]} />
-
-      <Model />
-
+      <Suspense fallback={null}>
+        <Model />
+      </Suspense>
       <OrbitControls 
         enableZoom={false}
         enablePan={false}
