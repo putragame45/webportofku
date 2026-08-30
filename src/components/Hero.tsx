@@ -43,13 +43,10 @@ function SocialIcon({
 export default function Hero() {
   return (
     <section className="bg-black text-white min-h-screen">
-      <div className="max-w-4xl mx-auto pt-40">
+      <div className="max-w-7xl mx-auto pt-40 relative">
 
         {/* Atas */}
         <div className="relative flex items-center gap-16">
-
-          
-
           <div className="absolute top-[-25px] left-[180px] z-30 hover:translate-y-1 transition-transform duration-300">
             <Image
             src="/icons/Arrow.svg"
@@ -57,6 +54,7 @@ export default function Hero() {
             width={130}
             height={110}
             />
+
           </div>
           {/* Avatar */}
           <div className="relative ml-10">
@@ -154,6 +152,17 @@ export default function Hero() {
           </div>
 
         </div>
+        <div
+        className="
+          absolute
+          right-[-100px]
+          top-[300px]
+          w-[800px]
+          h-[800px]
+          z-20
+          ">
+            <Model3D />
+          </div>
 
         {/* Bawah */}
         <div className="mt-20">
